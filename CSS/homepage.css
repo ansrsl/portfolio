@@ -1,0 +1,586 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f900;
+    padding-top: 0px;
+}
+
+header {
+    position: absolute; /* add relative positioning to the header */
+    top: 0; /* fix the header to the top of the page */
+    width: 100%; /* set the width to 100% */
+    z-index: 1; /* set a high z-index to ensure it's on top of other elements */
+    background-color: transparent; /* set the background color to transparent */
+    box-shadow: none; /* remove the box shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-section img {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-section a {
+  margin-bottom: -10px;
+}
+
+.social-media-overlay {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media-overlay a {
+  padding: 10px;
+    margin-right: 10px;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.social-media-overlay a:hover {
+    color: #666;
+}
+
+.social-media-overlay img {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+nav ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 80px; /* add a 20px gap between navigation items */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* remove the gap for the last item */
+  }
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo {
+    width: 50px; /* adjust the width of the logo */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+#background-image {
+    margin-top: -40px; /* add this to reduce the gap between the header and the image */
+}
+
+#background-image img {
+    width: 100vw; /* set the width to 100% of the viewport width */
+    height: 90vh; /* set the height to 100% of the viewport height */
+    overflow: hidden; /* hide any excess image area */
+    top: 0; /* add this to position the image at the top */
+    object-fit: cover; /* scale the image to cover the entire area */
+  }
+  
+#background-image img {
+    min-width: 100%; /* ensure the image is at least 100% of the parent width */
+    min-height: 100%; /* ensure the image is at least 100% of the parent height */
+    object-fit: cover; /* scale the image to cover the entire area */
+  }
+
+  .overlay-text {
+    position: absolute; /* position the overlay text absolutely */
+    top: 45%; /* center the overlay text vertically */
+    left: 50%; /* center the overlay text horizontally */
+    transform: translate(-50%, -50%); /* adjust the position to center the text */
+    text-align: center; /* center the text horizontally */
+    color: #fff; /* set the text color to white */
+    z-index: 1; /* ensure the overlay text is on top of the image */
+}
+
+.overlay-text h1 {
+    font-family: 'Times Sans Serif'; /* add this line */
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+.overlay-text p {
+    font-family: 'Arial', 'Sans Serif'; /* add this line */
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+.whatsapp-btn {
+    background-color: #25d36500; /* set the background color to WhatsApp green */
+    color: #fff; /* set the text color to white */
+    padding: 10px 20px; /* add some padding */
+    font-size: 16px; /* set the font size */
+    cursor: pointer; /* change the cursor to a pointer */
+    text-decoration: none; /* remove the underline */
+    border: 1px solid #ffffff;
+}
+
+.whatsapp-btn:hover {
+    background-color: #ffffffa8; /* set the background color to a darker WhatsApp green on hover */
+}
+
+  #gallery {
+    margin-bottom: 20px;
+}
+
+  #gallery h1 {
+    position: relative;
+    font-family: 'Times Sans Serif'; /* add this line */
+    font-size: 40px;
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-bottom: 0px; /* add some margin bottom to separate from images */
+}
+
+#gallery p {
+  position: relative;
+  font-family: 'Times Sans Serif'; /* add this line */
+  font-size: 20px;
+  font-weight: lighter;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+#morebtn {
+  margin: 20px;
+}
+
+.gallery-more {
+    background-color: #fafafa00; /* set the background color to WhatsApp green */
+    color: #000000; /* set the text color to white */
+    padding: 10px 20px; /* add some padding */
+    font-size: 16px; /* set the font size */
+    cursor: pointer; /* change the cursor to a pointer */
+    text-decoration: none; /* remove the underline */
+    border: 1px solid #000000;
+}
+
+.gallery-more:hover {
+    background-color: #000000a8; 
+    color: #ffffff;
+}
+
+#gallerycollection {
+    display: flex;
+    flex-wrap: nowrap; /* don't wrap images to the next line */
+    overflow-x: auto; /* add horizontal scrollbar */
+    padding: 10px; /* add some padding for the scrollbar */
+  }
+  
+  #gallerycollection img {
+    width: 25%;
+    margin: 10px; /* add some margin between images */
+    border-radius: 10px; /* add some border radius for a nice touch */
+    object-fit: cover; /* make sure the image is scaled to fit the container */
+  }
+
+  #filler {
+    margin-top: 20px; /* add this to reduce the gap between the header and the image */
+    position: relative;
+}
+  
+.overlay-filler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.497);
+    display: flex;
+    flex-direction: column; /* add this to stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  .overlay-filler::before {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 10px;
+    background-color: #ffffff69;
+    margin-bottom: 20px;
+}
+  
+  .overlay-filler h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px; /* add some margin bottom to separate from button */
+  }
+
+.quotation-btn {
+    background-color: #fafafa00; /* set the background color to WhatsApp green */
+    color: #ffffff; /* set the text color to white */
+    padding: 10px 20px; /* add some padding */
+    font-size: 16px; /* set the font size */
+    cursor: pointer; /* change the cursor to a pointer */
+    text-decoration: none; /* remove the underline */
+    margin-left: 0px;
+    margin-top: 0px;
+    border: 1px solid #f8f8f8;
+}
+
+.quotation-btn:hover {
+    background-color: #909090a8; 
+    color: #ffffff;
+}
+  
+#filler img {
+    width: 100vw; /* set the width to 100% of the viewport width */
+    height: 70vh; /* set the height to 100% of the viewport height */
+    overflow: hidden; /* hide any excess image area */
+    top: 0; /* add this to position the image at the top */
+    object-fit: cover; /* scale the image to cover the entire area */
+  }
+  
+#filler img {
+    min-width: 100%; /* ensure the image is at least 100% of the parent width */
+    min-height: 100%; /* ensure the image is at least 100% of the parent height */
+    object-fit: cover; /* scale the image to cover the entire area */
+  }
+
+
+
+.about-container {
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-part::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 10px;
+  background-color: #00000041;
+  margin: 0 auto; /* add this to center the element horizontally */
+  margin-bottom: 20px;
+}
+
+.text-part {
+  flex-basis: 50%; /* set the width to 50% */
+  padding: 20px;
+  text-align: center;
+}
+
+.text-part h1{
+  font-family: 'Times Sans Serif'; /* add this line */
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.text-part h2{
+  font-family: 'Times Sans Serif'; /* add this line */
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.text-part p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    padding: 5px;
+}
+
+.text-part a {
+  background-color: #fafafa00; /* set the background color to WhatsApp green */
+  color: #000000; /* set the text color to white */
+  padding: 5px 10px;
+  font-size: 16px; /* set the font size */
+  cursor: pointer; /* change the cursor to a pointer */
+  text-decoration: none; /* remove the underline */
+  border: 1px solid #000000;
+}
+
+.text-part a:hover {
+  background-color: #909090a8; 
+  color: #000000;
+}
+
+.image-part {
+  flex-basis: 50%; /* set the width to 50% */
+  padding: 0px;
+}
+
+.image-part img {
+  width: 105.3%; /* set the width to 100% of the parent */
+  height: auto;
+}
+
+.mobilegraphy-container {
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-part2 {
+  flex-basis: 50%;
+  padding: 0px;
+  margin-left: -40px; /* add this to move the image to the left */
+}
+
+.image-part2 img {
+  width: 105.3%; /* set the width to 100% of the parent */
+  height: auto;
+}
+
+.text-part2 {
+  flex-basis: 50%;
+  padding: 20px;
+  text-align: center; /* add this to center the text */
+  margin-left: 40px; /* add this to move the text to the right */
+}
+
+.text-part2::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 10px;
+  background-color: #00000041;
+  margin: 0 auto; /* add this to center the element horizontally */
+  margin-bottom: 20px;
+}
+
+.text-part2 h1{
+  font-family: 'Times Sans Serif'; /* add this line */
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.text-part2 p{
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.text-part2 a {
+  background-color: #fafafa00; /* set the background color to WhatsApp green */
+  color: #000000; /* set the text color to white */
+  padding: 5px 10px;
+  font-size: 16px; /* set the font size */
+  cursor: pointer; /* change the cursor to a pointer */
+  text-decoration: none; /* remove the underline */
+  border: 1px solid #000000;
+}
+
+.text-part2 a:hover {
+  background-color: #909090a8; 
+  color: #000000;
+}
+
+.event-container {
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-part3::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 10px;
+  background-color: #00000041;
+  margin: 0 auto; /* add this to center the element horizontally */
+  margin-bottom: 20px;
+}
+
+.text-part3 {
+  flex-basis: 50%; /* set the width to 50% */
+  padding: 20px;
+  text-align: center;
+}
+
+.text-part3 h1{
+  font-family: 'Times Sans Serif'; /* add this line */
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.text-part3 p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.text-part3 a {
+  background-color: #fafafa00; /* set the background color to WhatsApp green */
+  color: #000000; /* set the text color to white */
+  padding: 5px 10px;
+  font-size: 16px; /* set the font size */
+  cursor: pointer; /* change the cursor to a pointer */
+  text-decoration: none; /* remove the underline */
+  border: 1px solid #000000;
+}
+
+.text-part3 a:hover {
+  background-color: #909090a8; 
+  color: #000000;
+}
+
+.image-part3 {
+  flex-basis: 50%; /* set the width to 50% */
+  padding: 0px;
+}
+
+.image-part3 img {
+  width: 105.3%; /* set the width to 100% of the parent */
+  height: auto;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 150px;
+  text-align: center;
+  clear: both;
+  margin-top: -40px;
+  position: relative; /* add this to make the social media footer absolute */
+}
+
+footer nav {
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  margin-top: -30px;
+}
+
+footer nav li {
+  text-align: center;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #ccc;
+}
+
+.social-media-footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-footer a {
+  padding: 10px;
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.social-media-footer a:hover {
+  color: #ccc;
+}
+
+.social-media-footer img {
+  width: 24px;
+  height: 24px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #444;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 90%;
+    }
+}
