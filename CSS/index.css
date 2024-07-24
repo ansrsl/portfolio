@@ -163,6 +163,8 @@ main {
     cursor: pointer; /* change the cursor to a pointer */
     text-decoration: none; /* remove the underline */
     border: 1px solid #ffffff;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 .whatsapp-btn:hover {
