@@ -149,19 +149,18 @@ main {
 }
 
 .overlay-text p {
-    font-family: 'Arial', 'Sans Serif'; /* add this line */
+    font-family: 'Arial', 'Sans Serif'; 
     font-size: 16px;
     font-weight: lighter;
-    margin-bottom: 15px;
 }
 
 .whatsapp-btn {
-    background-color: #25d36500; /* set the background color to WhatsApp green */
-    color: #fff; /* set the text color to white */
-    padding: 10px 20px; /* add some padding */
-    font-size: 16px; /* set the font size */
-    cursor: pointer; /* change the cursor to a pointer */
-    text-decoration: none; /* remove the underline */
+    background-color: #25d36500; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    text-decoration: none; 
     border: 1px solid #ffffff;
     margin-top: 20px;
     display: inline-block;
